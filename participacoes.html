@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Participações Extra Curriculares - [Seu Nome]</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        // verificação de login
+        function checkLogin() {
+            // Verificar se o usuário está logado (pode ser por meio de cookies, localStorage, ou outro método)
+            const isLoggedIn = sessionStorage.getItem('loggedIn');
+
+            // Se não estiver logado, redirecionar para a página de login
+            if (!isLoggedIn) {
+                window.location.href = 'login.html';
+            }
+        }
+
+        // Chamar a função de verificação ao carregar a página
+        window.onload = checkLogin;
+    </script>
+
 </head>
 <body>
     <header>
@@ -17,7 +33,7 @@
                 <li><a href="index.html">Sobre</a></li>
                 <li><a href="experiencia.html">Experiência Profissional</a></li>
                 <li><a href="projetos.html">Projetos Sociais</a></li>
-                <li><a href="participacoes.html">Participações Extra Curriculares</a></li>
+                <li><a href="participacoes.html">Meus Projetos</a></li>
             </ul>
         </nav>
     </header>
@@ -26,8 +42,15 @@
         <h2>Participações Extra Curriculares</h2>
         <ul>
             <li>
-                <h3>[Atividade]</h3>
-                <p>[Descrição]</p>
+                <h3>[Calculadora em JS]</h3>
+                <p>[Primeira progração em JS. Clique <a href="arquivos/19-calc-js/index.html">aqui</a> e veja o funcionamento.]</p>
+            </li>
+            <!-- Repita para outras participações -->
+        </ul>
+        <ul>
+            <li>
+                <h3>[Jogo da Velha JS]</h3>
+                <p>[Jogo da velha feito em JS. Clique <a href="arquivos/JogoDaVelha/index.html">aqui</a> e veja o funcionamento.]</p>
             </li>
             <!-- Repita para outras participações -->
         </ul>
