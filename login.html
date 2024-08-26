@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #333;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-container {
+            max-width: 400px;
+            width: 100%;
+            padding: 30px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+        .login-container h2 {
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 600;
+        }
+        .social-login button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Faça login para ver meus trabalhos</h2>
+    <!-- <form> -->
+    <form onsubmit="event.preventDefault(); login();">
+    
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Senha</label>
+            <input type="password" class="form-control" id="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+    </form>
+    <p class="text-center mt-3">or</p>
+    <div class="social-login">
+        <button type="button" class="btn btn-danger btn-block">
+            <i class="fab fa-google"></i> Acessar com Gmail
+        </button>
+        <button type="button" class="btn btn-primary btn-block">
+            <i class="fab fa-linkedin"></i> Acessar com LinkedIn
+        </button>
+        <button type="button" class="btn btn-info btn-block">
+            <i class="fab fa-instagram"></i> Acessar com Instagram
+        </button>
+    </div>
+    <p class="text-center mt-3">
+        <a href="#">Esqueceu sua senha?</a>
+    </p>
+</div>
+
+<script>
+    function login() {
+        // Aqui você faria a autenticação real (verificação de email/senha)
+        // Para este exemplo, vamos simular um login bem-sucedido
+
+        // Marcar o usuário como logado
+        sessionStorage.setItem('loggedIn', true);
+
+        // Redirecionar para a página de participações
+        window.location.href = 'participacoes.html';
+    }
+</script>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Font Awesome for social icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
