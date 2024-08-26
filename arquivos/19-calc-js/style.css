@@ -40,6 +40,17 @@
     background-color: var(--font-color);
     color: var(--bg-color);
   }
+
+  #returnButton {
+    background-color: var(--bg-color);
+    border: .125rem solid var(--font-color);
+    color: var(--font-color);
+  }
+  
+  #treturnButton:hover {
+    background-color: var(--font-color);
+    color: var(--bg-color);
+  }
   
   button {
     background-color: var(--primary-color);
